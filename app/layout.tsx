@@ -1,22 +1,22 @@
-import { ReactNode } from 'react'
-import './style.css'
-import Sidebar from '@/components/Sidebar'
+import { ReactNode } from "react";
+import "./style.css";
+import Sidebar from "@/components/Sidebar";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
-        <div className='container'>
-          <div className='main'>
+        <div className="container">
+          <div className="main">
             <Sidebar />
-            <section className='col note-viewer'>{children}</section>
+            <section className="col note-viewer">{children}</section>
           </div>
         </div>
       </body>
     </html>
-  )
+  );
 }

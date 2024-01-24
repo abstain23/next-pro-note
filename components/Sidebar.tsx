@@ -1,19 +1,17 @@
-import React, {Suspense} from 'react'
-import Link from 'next/link'
-import Image from 'next/image';
-import { getAllNotes } from '@/lib/redis';
-import SidebarNoteList from '@/components/SidebarNoteList'
+import React, { Suspense } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { getAllNotes } from "@/lib/redis";
+import SidebarNoteList from "@/components/SidebarNoteList";
 import EditButton from "@/components/EditButton";
 import NoteListSkeleton from "@/components/NoteListSkeleton";
 import SidebarSearchField from "@/components/SidebarSearchField";
 
 export default async function Sidebar() {
-
-
   return (
     <>
       <section className="col sidebar">
-        <Link href='/' className="link--unstyled">
+        <Link href="/" className="link--unstyled">
           <section className="sidebar-header">
             <Image
               className="logo"
@@ -22,7 +20,7 @@ export default async function Sidebar() {
               height={20}
               alt=""
               role="presentation"
-              />
+            />
             <strong>React Notes</strong>
           </section>
         </Link>
@@ -39,5 +37,5 @@ export default async function Sidebar() {
         </nav>
       </section>
     </>
-  )
+  );
 }
